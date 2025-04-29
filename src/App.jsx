@@ -50,17 +50,30 @@ function Navbar() {
       e.target.classList.remove('exit-animation');
     }
   };
-
-
-
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50 w-full">
       <div className="w-full px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600">Tri Yoga Arsyad</span>
+            <div className="text-2xl font-bold flex">
+              {"Tri Yoga Arsyad".split("").map((letter, index) => (
+                <span 
+                  key={index}
+                  className="animate-color-wave"
+                  style={{ 
+                    animationDelay: `${index * 0.2}s`, // Diperlambat dari 0.1 ke 0.2
+                    backgroundImage: `linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f59e0b, #3b82f6)`,
+                    backgroundSize: '300% 100%'
+                  }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </div>
           </div>
-          
+
+
+
           {/* Menu desktop */}
           <div className="hidden md:flex space-x-6">
             <a 

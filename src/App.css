@@ -182,3 +182,48 @@ body {
 .nav-link.group:hover span {
   transition: width 0.3s ease-in-out;
 }
+
+
+.animate-color-wave {
+  display: inline-block;
+  animation: colorWave 3s infinite ease-in-out; /* Durasi diperpanjang dari 2s ke 3s */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+
+@keyframes colorWave {
+  0% {
+    opacity: 0;
+    background-position: 0% 50%;
+  }
+  15% { /* Timing diadjust untuk durasi lebih panjang */
+    opacity: 1;
+    background-position: 30% 50%;
+  }
+  30% {
+    opacity: 1;
+    background-position: 60% 50%;
+  }
+  45% {
+    opacity: 1;
+    background-position: 100% 50%;
+  }
+  60% {
+    opacity: 1;
+    background-position: 60% 50%;
+  }
+  75% {
+    opacity: 1;
+    background-position: 30% 50%;
+  }
+  90% {
+    opacity: 1;
+    background-position: 0% 50%;
+  }
+  100% {
+    opacity: 0;
+    background-position: 0% 50%;
+  }
+}
